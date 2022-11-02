@@ -5,7 +5,7 @@ const fetchProduct = async () => {
     const id = window.location.search;
     const {
       data: { fields },
-    } = await axios.get(`/api/3-airtable${id}`);
+    } = await axios.get(`/api/3-product${id}`);
     const { desc, name, price, image } = fields;
     result.innerHTML = `
       <h1 class="title">${name}</h1>
